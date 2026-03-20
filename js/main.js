@@ -38,29 +38,39 @@ document.addEventListener('DOMContentLoaded', () => {
         lastScroll = currentScroll;
     });
 
-    // Contact form handling (placeholder — replace with real form service)
+    // Contact form handling - let Netlify handle submission natively
     const contactForm = document.getElementById('contactForm');
 
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            // Collect form data
             const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData.entries());
 
-            // For now, show a confirmation message
-            // Replace this with Formspree, Netlify Forms, or similar service
-            const wrapper = contactForm.closest('.contact-form-wrapper');
-            wrapper.innerHTML = `
-                <div style="text-align: center; padding: 40px 0;">
-                    <div style="font-size: 48px; margin-bottom: 16px;">✓</div>
-                    <h3 style="font-family: 'DM Serif Display', serif; font-size: 1.5rem; margin-bottom: 12px;">Message Sent</h3>
-                    <p style="color: #6b6b82; font-size: 16px;">Thank you, ${data.name}. We'll be in touch within one business day.</p>
-                </div>
-            `;
-
-            console.log('Form submitted:', data);
+            fetch(contactForm.action || '/', {
+                method: 'POST',
+                body: new URLSearchParams(formData).toString(),
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+            })
+            .then(response => {
+                if (response.ok) {
+                    const data = Object.fromEntries(formData.entries());
+                    const wrapper = contactForm.closest('.contact-form-wrapper');
+                    wrapper.innerHTML = `
+                        <div style="text-align: center; padding: 40px 0;">
+                            <div style="font-size: 48px; margin-bottom: 16px;">✓</div>
+                            <h3 style="font-family: 'DM Serif Display', serif; font-size: 1.5rem; margin-bottom: 12px;">Message Sent</h3>
+                            <p style="color: #6b6b82; font-size: 16px;">Thank you, ${data.name}. We'll be in touch within one business day.</p>
+                        </div>
+                    `;
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch((error) => {
+                alert('There was an error sending your message. Please try emailing us directly at john@mallory.consulting');
+                console.error('Form error:', error);
+            });
         });
     }
 
