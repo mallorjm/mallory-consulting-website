@@ -74,6 +74,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Early access signup form for Actu8 landing page
+    const earlyAccessForm = document.getElementById('earlyAccessForm');
+
+    if (earlyAccessForm) {
+        earlyAccessForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const emailInput = document.getElementById('earlyEmail');
+
+            if (!emailInput || !emailInput.value.trim()) {
+                emailInput.focus();
+                return;
+            }
+
+            const email = emailInput.value.trim();
+            const messageWrapper = document.createElement('p');
+
+            messageWrapper.className = 'small-note';
+            messageWrapper.style.marginTop = '14px';
+
+            messageWrapper.textContent = `Thanks ${email}! You're on the Actu8 waitlist. We'll email you updates soon.`;
+            earlyAccessForm.after(messageWrapper);
+            earlyAccessForm.reset();
+
+            // TODO: connect to real API / Mailchimp / product backend
+            console.log('Early access request:', email);
+        });
+    }
+
     // Simple scroll-triggered animations
     const observerOptions = {
         threshold: 0.1,
