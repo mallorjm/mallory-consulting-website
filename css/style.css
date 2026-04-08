@@ -1146,3 +1146,127 @@ body {
         width: 100%;
     }
 }
+/* ============================================
+   Blog Post Styles — APPEND TO style.css
+   ============================================ */
+
+.container-narrow {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.blog-post {
+    padding-bottom: var(--section-padding);
+}
+
+.blog-post-header {
+    padding: 160px 0 50px;
+    background: linear-gradient(180deg, var(--color-surface-warm) 0%, var(--color-surface) 100%);
+}
+
+.blog-post-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    color: var(--color-ink-muted);
+}
+
+.blog-post-meta a {
+    color: var(--color-accent);
+    font-weight: 500;
+}
+
+.meta-separator {
+    color: var(--color-border);
+}
+
+.blog-post-header h1 {
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    line-height: 1.15;
+    margin-bottom: 24px;
+}
+
+.blog-post-byline {
+    font-size: 16px;
+    color: var(--color-ink-muted);
+    font-style: italic;
+}
+
+.blog-post-body {
+    padding-top: 48px;
+}
+
+.blog-post-body .lead {
+    font-size: 21px;
+    line-height: 1.6;
+    color: var(--color-ink);
+    margin-bottom: 28px;
+    font-weight: 400;
+}
+
+.blog-post-body p {
+    font-size: 18px;
+    line-height: 1.75;
+    margin-bottom: 24px;
+    color: var(--color-ink-light);
+}
+
+.blog-post-body h2 {
+    font-size: 1.9rem;
+    margin-top: 56px;
+    margin-bottom: 20px;
+    color: var(--color-ink);
+}
+
+.blog-post-body h3 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 36px;
+    margin-bottom: 12px;
+    color: var(--color-ink);
+}
+
+.blog-post-body h3 + p {
+    margin-top: 0;
+}
+
+.post-cta {
+    margin-top: 48px;
+    text-align: center;
+}
+
+.post-divider {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 56px 0 32px;
+}
+
+.post-author-bio {
+    font-size: 16px;
+    color: var(--color-ink-muted);
+    text-align: center;
+}
+
+.post-author-bio a {
+    color: var(--color-accent);
+    font-weight: 500;
+}
+
+@media (max-width: 640px) {
+    .blog-post-header {
+        padding-top: 120px;
+    }
+
+    .blog-post-body .lead {
+        font-size: 19px;
+    }
+
+    .blog-post-body p {
+        font-size: 17px;
+    }
+}

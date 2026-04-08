@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Configuration Trap: Finding the Right Balance in AdaptiveWork | Mallory Consulting</title>
+    <meta name="description" content="AdaptiveWork's configurability is one of its greatest strengths — and one of its biggest risks. Learn how to recognize over-configuration and a simple framework for smarter decisions.">
+    <meta name="keywords" content="AdaptiveWork configuration, Planview AdaptiveWork best practices, AdaptiveWork governance, project management platform, AdaptiveWork over-configuration">
+    <meta property="og:title" content="The Configuration Trap: Finding the Right Balance in AdaptiveWork">
+    <meta property="og:description" content="How to recognize when AdaptiveWork customization crosses the line into over-configuration, and a simple framework for smarter decisions.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mallory.consulting/blog/the-configuration-trap.html">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mallory.consulting/blog/the-configuration-trap.html">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "The Configuration Trap: Finding the Right Balance in AdaptiveWork",
+        "description": "How to recognize when AdaptiveWork customization crosses the line into over-configuration, and a simple framework for smarter decisions.",
+        "author": {
+            "@type": "Person",
+            "name": "John Mallory",
+            "jobTitle": "Founder, Mallory Consulting",
+            "url": "https://www.linkedin.com/in/john-mallory-pmp-mitm-1766a44/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Mallory Consulting, LLC",
+            "url": "https://mallory.consulting"
+        },
+        "datePublished": "2026-04-07",
+        "url": "https://mallory.consulting/blog/the-configuration-trap.html"
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-mark">M</span>
+                <span class="logo-text">Mallory Consulting</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../contact.html" class="nav-cta">Get in Touch</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="blog-post">
+            <header class="blog-post-header">
+                <div class="container container-narrow">
+                    <p class="blog-post-meta">
+                        <a href="../blog.html">&larr; All Articles</a>
+                        <span class="meta-separator">•</span>
+                        <span>April 2026</span>
+                        <span class="meta-separator">•</span>
+                        <span class="blog-category">Best Practices</span>
+                    </p>
+                    <h1>The Configuration Trap:<br><em>Finding the Right Balance in AdaptiveWork</em></h1>
+                    <p class="blog-post-byline">By John Mallory, PMP, MITM</p>
+                </div>
+            </header>
+
+            <div class="blog-post-body">
+                <div class="container container-narrow">
+                    <p class="lead">Planview AdaptiveWork is a powerful platform. With custom fields, custom objects, workflow rules, custom actions, and global CSS/JavaScript, there's almost no limit to how far you can tailor it to fit your organization. And that's exactly where the trouble starts.</p>
+
+                    <p>Over the years, I've seen many well-intentioned configuration efforts gradually cross the line from "tailored to our needs" to "suboptimal and unnecessarily complex." If you are responsible for an AdaptiveWork implementation or ongoing administration, this post is for you.</p>
+
+                    <h2>When Customization Becomes Over-Configuration</h2>
+
+                    <p>Every customization starts with a reasonable request. "Can we add a field to track X?" "Can we automate this approval?" "Can we create a custom object for vendor management?" Individually, these are smart moves. But without a clear strategy, they accumulate — and the platform starts working against you instead of for you.</p>
+
+                    <p>Here are the warning signs I see most often:</p>
+
+                    <h3>Lack of a dedicated Product Owner</h3>
+                    <p>Sometimes the biggest configuration problems aren't technical — they're governance problems. Some customers use AdaptiveWork exactly how it was intended to be used: as the organization's project management information system, enabling standardization and PMO-level reporting. But other customers have a wide range of user groups with completely different business needs who want to leverage AdaptiveWork's configurability to create feature sets for their unique processes. Or they have different project management workstreams that each want AdaptiveWork to be configured specifically for their desired methodologies and business practices without considering the impact to performance and ongoing maintenance. Configurability is a great strength of AdaptiveWork, but you need a dedicated product owner to evaluate and prioritize the configuration wish list with assistance from a knowledgeable AdaptiveWork technical consultant who can help identify the trade-offs and potential pitfalls that occur when everyone gets everything they ask for.</p>
+
+                    <h3>Workflow rules that trigger other workflow rules</h3>
+                    <p>What starts as a simple automation becomes a chain reaction. One field update triggers a rule, which updates another field, which triggers two more rules. Before long, saving a single record kicks off a cascade that's difficult to predict and even harder to troubleshoot. I've worked with organizations where no one on the current team could explain why certain fields were changing — the original configurator had moved on, and the logic was buried across dozens of interdependent rules.</p>
+
+                    <h3>Multiple custom objects and custom links to support extraneous processes</h3>
+                    <p>Every organization has business processes that are ancillary but related to project management. For example, an RFI (Request for Information) process or a billing process. Or they might have a process completely unrelated to project management, but they want to leverage AdaptiveWork's configurability to create a custom solution to meet the need. Depending on the configurations involved, this can either be a clever way of leveraging the tool, or it can mean AdaptiveWork's core value is compromised by unnecessary complexity that compromises performance and adds maintenance overhead.</p>
+
+                    <h3>Fields and business rules that no longer apply</h3>
+                    <p>It's surprisingly common to find dozens of custom fields and/or business rules that were created for a specific initiative, never cleaned up, and continue to add clutter and overhead. I have seen evaluation criteria across multiple rules to account for scenarios that will never happen because they were part of an abandoned business process. Yet the rule must continually check for that deprecated scenario.</p>
+
+                    <h2>A Simple Framework for Smarter Configuration</h2>
+
+                    <p>Before building anything custom, I ask three questions:</p>
+
+                    <h3>1. Can the platform do this natively?</h3>
+                    <p>AdaptiveWork's out-of-the-box capabilities are extensive. Before creating a custom object or workflow, make sure you've explored whether a native feature — or a simpler configuration of one — already exists.</p>
+
+                    <h3>2. Who will maintain this after I'm gone?</h3>
+                    <p>This is the question that gets skipped most often. If the answer is "whoever replaces me," that's not a plan. Every custom configuration should be documented and simple enough that a competent admin can understand it without archaeology.</p>
+
+                    <h3>3. What's the cost of this customization over time?</h3>
+                    <p>A configuration may take five minutes to create, but if it adds a few seconds to every page load or business rule execution, those costs compound quickly. Not to mention the hit to user experience. And it could take hours to troubleshoot two years from now when it conflicts with something new. Factor in the long-term cost, not just the build effort.</p>
+
+                    <h2>The Goal: Configured, Not Complicated</h2>
+
+                    <p>The best AdaptiveWork environments I've worked in share a common trait — they're thoughtfully configured, not maximally configured. They use custom fields and workflow rules where they add clear value. They document everything. And they resist the urge to build a custom solution for every request that comes in.</p>
+
+                    <p>If your AdaptiveWork instance has grown unwieldy — or if you're about to embark on a new implementation and want to get it right from the start — I'd love to help. A configuration audit can identify what's adding value, what's creating risk, and where you can simplify without losing functionality.</p>
+
+                    <p class="post-cta"><a href="../contact.html" class="btn btn-primary">Get in Touch &rarr;</a></p>
+
+                    <hr class="post-divider">
+
+                    <p class="post-author-bio"><em>John Mallory is the founder of Mallory Consulting, LLC, specializing in Planview AdaptiveWork implementation and configuration. Connect with him on <a href="https://www.linkedin.com/in/john-mallory-pmp-mitm-1766a44/" target="_blank" rel="noopener">LinkedIn</a>.</em></p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">
+                        <span class="logo-mark">M</span>
+                        <span class="logo-text">Mallory Consulting</span>
+                    </a>
+                    <p>Expert project management consulting and implementation services.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/john-mallory-pmp-mitm-1766a44/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="mailto:info@mallory.consulting">info@mallory.consulting</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mallory Consulting, LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

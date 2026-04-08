@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" width="520" height="100">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;display=swap');
+    </style>
+  </defs>
+  <!-- Logo Mark -->
+  <rect x="10" y="10" width="80" height="80" rx="17" fill="#2d5a7b"/>
+  <text
+    x="50"
+    y="50"
+    font-family="'DM Serif Display', Georgia, serif"
+    font-size="47"
+    fill="#ffffff"
+    text-anchor="middle"
+    dominant-baseline="central"
+  >M</text>
+  <!-- Logo Text -->
+  <text
+    x="110"
+    y="50"
+    font-family="'DM Serif Display', Georgia, serif"
+    font-size="34"
+    fill="#1a1a2e"
+    dominant-baseline="central"
+    letter-spacing="-0.3"
+  >Mallory Consulting</text>
+</svg>
