@@ -1270,3 +1270,52 @@ body {
         font-size: 17px;
     }
 }
+
+
+/* ============================================
+   AI Capabilities Section (home page)
+   ============================================ */
+.ai-section {
+    padding: var(--section-padding) 0;
+}
+
+.ai-section .section-subtitle {
+    max-width: 640px;
+    margin-bottom: 48px;
+}
+
+.ai-note {
+    margin-top: 48px;
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--color-ink);
+}
+
+.ai-note em {
+    color: var(--color-accent);
+}
+
+.ai-section + .services-preview {
+    background-color: var(--color-surface-warm);
+}
+
+.page-hero .hero-description {
+    max-width: 620px;
+    margin-top: 20px;
+}
+
+.ai-section .ai-link {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.ai-explainer {
+    padding: 0 0 var(--section-padding);
+}
+
+.ai-explainer p {
+    max-width: 680px;
+    font-size: 17px;
+    margin-bottom: 16px;
+}
